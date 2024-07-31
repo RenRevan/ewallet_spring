@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "1686fa7e-f8a8-4c67-a39c-a60cb12e8b81",
+		"name": "ewallet-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getallAcc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/wallet/allAccounts/first@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"allAccounts",
+						"first@gmail.com"
+					]
+				},
+				"description": "http://localhost:8080/wallet/login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/wallet/get-accounts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerEmail\":\"first@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/wallet/get-accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"get-accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/wallet/add-account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"iban\":\"UA123456789098765432123456792\",\r\n    \"walletId\":1,\r\n    \"bankId\":2,\r\n    \"currencyId\":3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/wallet/add-account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"add-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/wallet/registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobileNumber\":\"+3892271819\",\r\n     \"email\":\"test@test\",\r\n     \"firstName\":\"Customer1\",\r\n     \"lastName\" : \"Testov\",\r\n     \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/wallet/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
